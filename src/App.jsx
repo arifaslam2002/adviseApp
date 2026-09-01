@@ -1,15 +1,9 @@
-import { useEffect } from "react"
-import fetchAdvise from "./components/fetchApi"
+import Home from "./pages/Home"
 
 const App = () => {
- 
-  useEffect(()=>{
-  fetchAdvise()
-  },[])
-  
   return (
     <div>
-      <h1>App</h1>
+      <Home />
     </div>
   )
 }
