@@ -4,9 +4,10 @@ import AdviseCard from "../components/AdviseCard";
 
 const Home = () => {
   const [advise, setAdvise] = useState({});
-
+  const [loading, setloading] = useState(false);
   useEffect(() => {
     const getAdvise = async () => {
+      setloading(true);
       const data = await fetchAdvise();
       setAdvise(data);
     };
@@ -21,7 +22,7 @@ const Home = () => {
       </h1>
 
       <div className="w-full flex justify-center px-4">
-        <AdviseCard advise={advise} />
+        <AdviseCard advise={advise} loading = {loading} />
       </div>
     </div>
   );
