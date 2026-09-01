@@ -5,8 +5,6 @@ const fetchAdvise = async () => {
     "https://api.adviceslip.com/advice"
   );
 
-  console.log("API RESPONSE:", response.data);
-
   return response.data.slip;
 };
 
