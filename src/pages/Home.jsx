@@ -5,13 +5,13 @@ import AdviseCard from "../components/AdviseCard";
 const Home = () => {
   const [advise, setAdvise] = useState({});
   const [loading, setloading] = useState(false);
+  const getAdvise = async () => {
+    setloading(true);
+    const data = await fetchAdvise();
+    setAdvise(data);
+    setloading(false);
+  };
   useEffect(() => {
-    const getAdvise = async () => {
-      setloading(true);
-      const data = await fetchAdvise();
-      setAdvise(data);
-    };
-
     getAdvise();
   }, []);
 
@@ -22,7 +22,7 @@ const Home = () => {
       </h1>
 
       <div className="w-full flex justify-center px-4">
-        <AdviseCard advise={advise} loading = {loading} />
+        <AdviseCard advise={advise} loading={loading} getAdvise={getAdvise} />
       </div>
     </div>
   );

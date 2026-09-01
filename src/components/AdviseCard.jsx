@@ -1,6 +1,5 @@
 
-const AdviseCard = ({ advise,loading }) => {
-    console.log(loading)
+const AdviseCard = ({ advise,loading,getAdvise }) => {
   return (
     <div className="w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-lg">
      {loading ? (
