@@ -17,9 +17,13 @@ const Home = () => {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">
-        Thought of the Day
-      </h1>
+      <h1 className="mb-3 text-center text-5xl font-extrabold tracking-tight text-gray-900">
+  A Little <span className="text-blue-600">Wisdom</span> for You
+</h1>
+
+<p className="mb-10 text-center text-gray-500">
+  Discover a new thought to inspire your day.
+</p>
 
       <div className="w-full flex justify-center px-4">
         <AdviseCard advise={advise} loading={loading} getAdvise={getAdvise} />
